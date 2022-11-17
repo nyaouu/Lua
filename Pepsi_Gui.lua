@@ -1,3 +1,7 @@
+if game.CoreGui:FindFirstChild("PepsiUi") then
+    game.CoreGui:FindFirstChild("PepsiUi"):Destroy()
+end
+
 local library = {
 	WorkspaceName = "Name",
 	flags = {},
