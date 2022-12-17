@@ -1023,7 +1023,7 @@ do
             Text = Text;
             TextWrapped = DoesWrap or false,
             RichText = true,
-            TextXAlignment = Enum.TextXAlignment.Left;
+            TextXAlignment = Enum.TextXAlignment.Center;
             ZIndex = 5;
             Parent = Container;
         });
