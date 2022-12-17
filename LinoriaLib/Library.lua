@@ -1022,10 +1022,10 @@ do
             Text = Text;
             TextWrapped = DoesWrap or false,
             RichText = true,
-            if Center == nil or Center == false then
-               TextXAlignment = Enum.TextXAlignment.Left;
-            elseif Center == true then
+            if Center == true then
                TextXAlignment = Enum.TextXAlignment.Center;
+            elseif Center == nil or Center == false then
+               TextXAlignment = Enum.TextXAlignment.Left;
             end
             ZIndex = 5;
             Parent = Container;
