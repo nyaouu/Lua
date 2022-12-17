@@ -5,7 +5,6 @@ local CoreGui = game:GetService('CoreGui');
 local RunService = game:GetService('RunService')
 local GuiService = game:GetService('GuiService')
 local RenderStepped = RunService.RenderStepped;
-local LocalPlayer = game:GetService('Players').LocalPlayer;
 local Mouse = LocalPlayer:GetMouse();
 
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
@@ -1011,7 +1010,7 @@ do
         });
     end;
 
-    function Funcs:AddLabel(Text, DoesWrap)
+    function Funcs:AddLabel(Text, Center, DoesWrap)
         local Label = {};
 
         local Groupbox = self;
@@ -1023,7 +1022,11 @@ do
             Text = Text;
             TextWrapped = DoesWrap or false,
             RichText = true,
-            TextXAlignment = Enum.TextXAlignment.Left;
+            if Center == nil or Center == false then
+               TextXAlignment = Enum.TextXAlignment.Left;
+            elseif Center == true then
+               TextXAlignment = Enum.TextXAlignment.Center;
+            end
             ZIndex = 5;
             Parent = Container;
         });
