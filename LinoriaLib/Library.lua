@@ -1010,7 +1010,7 @@ do
         });
     end;
 
-    function Funcs:AddLabel(Text, Center, DoesWrap)
+    function Funcs:AddLabel(Text, DoesWrap)
         local Label = {};
 
         local Groupbox = self;
@@ -1022,11 +1022,7 @@ do
             Text = Text;
             TextWrapped = DoesWrap or false,
             RichText = true,
-            if Center == true then
-               TextXAlignment = Enum.TextXAlignment.Center;
-            elseif Center == nil or Center == false then
-               TextXAlignment = Enum.TextXAlignment.Left;
-            end
+            TextXAlignment = Enum.TextXAlignment.Center;
             ZIndex = 5;
             Parent = Container;
         });
